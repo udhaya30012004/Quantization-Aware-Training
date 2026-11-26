@@ -1,0 +1,3 @@
+# Run B: FP8 fake-quant QAT (E4M3, per-channel weights, per-token activations, STE) on the 168 projections.
+arm: qat_full
+quant: fp8_fakequant

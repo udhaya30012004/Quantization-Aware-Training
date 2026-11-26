@@ -1,0 +1,9 @@
+modal
+pyyaml
+datasets
+transformers
+huggingface_hub
+pytest
+jinja2
+torch
+matplotlib

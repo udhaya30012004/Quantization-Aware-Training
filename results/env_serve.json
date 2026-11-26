@@ -1,0 +1,36 @@
+{
+  "python": "3.11.12",
+  "versions": {
+    "torch": "2.14.0+cu130",
+    "transformers": "5.22.2",
+    "accelerate": "NOT AVAILABLE (ModuleNotFoundError)",
+    "datasets": "5.2.0",
+    "torchao": "NOT AVAILABLE (ModuleNotFoundError)",
+    "vllm": "0.34.0",
+    "llmcompressor": "NOT AVAILABLE (ModuleNotFoundError)",
+    "compressed_tensors": "0.17.0",
+    "transformer_engine": "NOT AVAILABLE (ModuleNotFoundError)"
+  },
+  "cuda_available": true,
+  "torch_cuda_version": "13.0",
+  "gpu": {
+    "name": "NVIDIA L4",
+    "capability": [
+      8,
+      9
+    ],
+    "total_memory_gb": 22.08
+  },
+  "bf16_supported": true,
+  "fp8_gemm": {
+    "ran": true,
+    "max_abs_err": 0.124359130859375,
+    "ref_abs_max": 44.05272674560547,
+    "out_dtype": "torch.bfloat16"
+  },
+  "fake_quant_roundtrip": {
+    "relative_error": 0.026398086920380592,
+    "ok": true
+  },
+  "nvidia_smi": "NVIDIA L4, 620.70.06, 23034 MiB"
+}

@@ -1,0 +1,31 @@
+{
+  "label": "bf16_bf16_s1",
+  "model_path": "/vol/checkpoints/bf16_full/seed_1",
+  "split": "test",
+  "n_total": 1319,
+  "n_correct": 464,
+  "n_incorrect": 855,
+  "accuracy": 0.35178165276724793,
+  "n_no_answer": 0,
+  "n_hit_max_tokens": 4,
+  "eval_loss": 0.7478929316665026,
+  "eval_ppl": 2.11254404907831,
+  "eval_loss_tokens": 122748,
+  "mean_gen_tokens": 94.71872630780895,
+  "load_seconds": 35.0,
+  "generate_seconds": 6.9,
+  "vllm_quantization": null,
+  "engine_args": {
+    "gpu_memory_utilization": 0.85,
+    "max_model_len": 1024,
+    "seed": 0,
+    "enforce_eager": true
+  },
+  "max_new_tokens": 512,
+  "vllm_version": "0.34.0",
+  "data_manifest_sha256": {
+    "train.jsonl": "e6db08d4a23c11a41eab8de676b4c692a3962897a17cd400ae63973c25c42210",
+    "val.jsonl": "8b7033d753717cce311869a9672d23d69df105dd057fc40c8068b9afde5f64fc",
+    "test.jsonl": "427f55038f87cd2d859d44a87eb721e8f22f9ada99449aa38e7a9b89fab5f728"
+  }
+}

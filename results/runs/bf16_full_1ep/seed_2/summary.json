@@ -1,0 +1,74 @@
+{
+  "run": "bf16_full_1ep/seed_2",
+  "arm": "bf16_full_1ep",
+  "quant": "none",
+  "seed": 2,
+  "n_params": 494032768,
+  "all_params_trainable": true,
+  "steps": 219,
+  "epochs_run": 1,
+  "train_examples": 7000,
+  "truncated": 0,
+  "first_loss": 0.6814917877513453,
+  "last_loss": 0.5141048431396484,
+  "val_loss_history": [
+    0.7121386885122757,
+    0.5219193428978068
+  ],
+  "val_loss_final_plain_bf16": 0.5219193428978068,
+  "train_seconds": 129.66269659996033,
+  "train_tokens_per_s": 9714.74474178401,
+  "peak_vram_gb": 14.343867301940918,
+  "first_step_weight_change": null,
+  "quant_stats": null,
+  "reload_max_abs_logit_diff": 0.0,
+  "checkpoint": "/vol/checkpoints/bf16_full_1ep/seed_2",
+  "config": {
+    "model": {
+      "id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+    },
+    "data": {
+      "dataset_id": "openai/gsm8k",
+      "dataset_config": "main",
+      "split_seed": 1234,
+      "n_val": 473,
+      "max_seq_length": 512,
+      "system_prompt": "Solve the math problem step by step. End with '#### <number>'."
+    },
+    "paths": {
+      "original": "/vol/checkpoints/original",
+      "ckpt_root": "/vol/checkpoints",
+      "runs_root": "/vol/runs",
+      "data": "/vol/data",
+      "results": "/vol/results"
+    },
+    "seed": 2,
+    "arm": "bf16_full_1ep",
+    "quant": "none",
+    "train": {
+      "epochs": 1,
+      "micro_batch_size": 4,
+      "grad_accum": 8,
+      "lr": 1e-05,
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "eps": 1e-08,
+      "max_grad_norm": 1.0,
+      "stochastic_rounding": true,
+      "gradient_checkpointing": false,
+      "log_every": 10,
+      "max_steps": null,
+      "limit_train": null,
+      "limit_val": null,
+      "track_weight_change": false,
+      "overwrite": false
+    },
+    "smoke": false,
+    "out_name": "bf16_full_1ep/seed_2"
+  }
+}

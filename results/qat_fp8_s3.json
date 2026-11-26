@@ -1,0 +1,31 @@
+{
+  "label": "qat_fp8_s3",
+  "model_path": "/vol/checkpoints/qat_full/seed_3_fp8",
+  "split": "test",
+  "n_total": 1319,
+  "n_correct": 475,
+  "n_incorrect": 844,
+  "accuracy": 0.3601213040181956,
+  "n_no_answer": 0,
+  "n_hit_max_tokens": 8,
+  "eval_loss": 0.7193195255797701,
+  "eval_ppl": 2.053035696936065,
+  "eval_loss_tokens": 122748,
+  "mean_gen_tokens": 93.02956785443517,
+  "load_seconds": 40.8,
+  "generate_seconds": 8.9,
+  "vllm_quantization": "compressed-tensors",
+  "engine_args": {
+    "gpu_memory_utilization": 0.85,
+    "max_model_len": 1024,
+    "seed": 0,
+    "enforce_eager": true
+  },
+  "max_new_tokens": 512,
+  "vllm_version": "0.34.0",
+  "data_manifest_sha256": {
+    "train.jsonl": "e6db08d4a23c11a41eab8de676b4c692a3962897a17cd400ae63973c25c42210",
+    "val.jsonl": "8b7033d753717cce311869a9672d23d69df105dd057fc40c8068b9afde5f64fc",
+    "test.jsonl": "427f55038f87cd2d859d44a87eb721e8f22f9ada99449aa38e7a9b89fab5f728"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "label": "kl_1ep_bf16_s0",
+  "checkpoint": "/vol/checkpoints/bf16_full_1ep/seed_0",
+  "split": "test",
+  "n_examples": 1319,
+  "n_tokens": 122748,
+  "n_wrapped": 168,
+  "fq_calls": 13944,
+  "kl_mean": 0.009697823773561019,
+  "top1_agreement": 0.9727083129664027,
+  "kl_max_token": 3.9407641887664795,
+  "fp8_simulation": "exact FP8 weights + per-token FP8 activation rounding (fake quant)",
+  "seconds": 19.0
+}

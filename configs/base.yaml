@@ -1,0 +1,42 @@
+# Shared settings for every arm. Arm configs (bf16_full.yaml, qat_fp8.yaml) override only `arm` and `quant`.
+model:
+  id: Qwen/Qwen2.5-0.5B-Instruct
+  revision: 7ae557604adf67be50417f59c2c2f167def9a775   # pinned; also recorded in data/manifest.json
+
+data:
+  dataset_id: openai/gsm8k
+  dataset_config: main
+  split_seed: 1234
+  n_val: 473              # carved out of the 7473 train examples -> 7000 train / 473 val
+  max_seq_length: 512
+  system_prompt: "Solve the math problem step by step. End with '#### <number>'."
+
+paths:                    # locations on the Modal volume
+  original: /vol/checkpoints/original
+  ckpt_root: /vol/checkpoints
+  runs_root: /vol/runs
+  data: /vol/data
+  results: /vol/results
+
+seed: 0
+arm: bf16_full
+quant: none               # none | fp8_fakequant
+
+train:
+  epochs: 3
+  micro_batch_size: 4     # effective batch = micro_batch_size * grad_accum = 32
+  grad_accum: 8
+  lr: 1.0e-5
+  warmup_ratio: 0.03
+  weight_decay: 0.0
+  betas: [0.9, 0.95]
+  eps: 1.0e-8
+  max_grad_norm: 1.0
+  stochastic_rounding: true      # BF16 weights updated with stochastic rounding (both arms)
+  gradient_checkpointing: false
+  log_every: 10
+  max_steps: null
+  limit_train: null
+  limit_val: null
+  track_weight_change: false
+  overwrite: false

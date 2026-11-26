@@ -1,0 +1,11 @@
+# Smoke-test overrides: tiny and fast, writes under /vol/checkpoints/smoke (never touches real checkpoints).
+train:
+  limit_train: 32
+  limit_val: 32
+  micro_batch_size: 4
+  grad_accum: 2
+  epochs: 3
+  max_steps: 10
+  log_every: 1
+  track_weight_change: true
+  overwrite: true

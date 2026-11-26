@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.claude/
+requirements-freeze.txt
+checkpoints/*
+!checkpoints/.gitkeep
+*.safetensors
+.modal/
+deck/node_modules/

@@ -1,0 +1,14 @@
+{
+  "label": "kl_1ep_qat_s2",
+  "checkpoint": "/vol/checkpoints/qat_full_1ep/seed_2",
+  "split": "test",
+  "n_examples": 1319,
+  "n_tokens": 122748,
+  "n_wrapped": 168,
+  "fq_calls": 13944,
+  "kl_mean": 0.009362941058332255,
+  "top1_agreement": 0.9736044579137746,
+  "kl_max_token": 2.57061505317688,
+  "fp8_simulation": "exact FP8 weights + per-token FP8 activation rounding (fake quant)",
+  "seconds": 18.3
+}

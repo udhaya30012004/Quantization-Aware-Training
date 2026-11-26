@@ -1,0 +1,11 @@
+metric,BF16 Full -> FP8,QAT Full -> FP8
+Accuracy % (mean),33.81,35.46
+Accuracy % (std over seeds),0.08,0.16
+Eval loss (mean),0.7559,0.7240
+Mean generated tokens,93.3,92.9
+QAT accuracy improvement (pp),,1.64
+
+seed,A bf16->BF16,B bf16->FP8,C qat->BF16,D qat->FP8
+0,35.78,33.74,36.47,35.41
+1,35.18,33.89,37.00,35.33
+2,35.33,33.81,35.18,35.63

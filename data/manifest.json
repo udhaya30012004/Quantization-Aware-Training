@@ -1,0 +1,22 @@
+{
+  "dataset": "openai/gsm8k",
+  "dataset_revision": "740312add88f781978c0658806c59bc2815b9866",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "model_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "split_seed": 1234,
+  "n_val": 473,
+  "files": {
+    "train.jsonl": {
+      "n": 7000,
+      "sha256": "e6db08d4a23c11a41eab8de676b4c692a3962897a17cd400ae63973c25c42210"
+    },
+    "val.jsonl": {
+      "n": 473,
+      "sha256": "8b7033d753717cce311869a9672d23d69df105dd057fc40c8068b9afde5f64fc"
+    },
+    "test.jsonl": {
+      "n": 1319,
+      "sha256": "427f55038f87cd2d859d44a87eb721e8f22f9ada99449aa38e7a9b89fab5f728"
+    }
+  }
+}

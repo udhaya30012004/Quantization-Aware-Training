@@ -1,0 +1,79 @@
+{
+  "run": "smoke/bf16_full_s0",
+  "arm": "bf16_full",
+  "quant": "none",
+  "seed": 0,
+  "n_params": 494032768,
+  "all_params_trainable": true,
+  "steps": 10,
+  "epochs_run": 3,
+  "train_examples": 32,
+  "truncated": 0,
+  "first_loss": 0.6885764363331466,
+  "last_loss": 0.17196320857245492,
+  "val_loss_history": [
+    0.7028499991511228,
+    0.5701154013208529,
+    0.6818300749417104,
+    0.6726014532070581
+  ],
+  "val_loss_final_plain_bf16": 0.6726014532070581,
+  "train_seconds": 8.752204418182373,
+  "train_tokens_per_s": 1584.2865794123718,
+  "peak_vram_gb": 13.491189956665039,
+  "first_step_weight_change": {
+    "weights_changed_frac": 0.20351917223434055,
+    "max_abs_change": 0.015625
+  },
+  "quant_stats": null,
+  "reload_max_abs_logit_diff": 0.0,
+  "checkpoint": "/vol/checkpoints/smoke/bf16_full_s0",
+  "config": {
+    "model": {
+      "id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+    },
+    "data": {
+      "dataset_id": "openai/gsm8k",
+      "dataset_config": "main",
+      "split_seed": 1234,
+      "n_val": 473,
+      "max_seq_length": 512,
+      "system_prompt": "Solve the math problem step by step. End with '#### <number>'."
+    },
+    "paths": {
+      "original": "/vol/checkpoints/original",
+      "ckpt_root": "/vol/checkpoints",
+      "runs_root": "/vol/runs",
+      "data": "/vol/data",
+      "results": "/vol/results"
+    },
+    "seed": 0,
+    "arm": "bf16_full",
+    "quant": "none",
+    "train": {
+      "epochs": 3,
+      "micro_batch_size": 4,
+      "grad_accum": 2,
+      "lr": 1e-05,
+      "warmup_ratio": 0.03,
+      "weight_decay": 0.0,
+      "betas": [
+        0.9,
+        0.95
+      ],
+      "eps": 1e-08,
+      "max_grad_norm": 1.0,
+      "stochastic_rounding": true,
+      "gradient_checkpointing": false,
+      "log_every": 1,
+      "max_steps": 10,
+      "limit_train": 32,
+      "limit_val": 32,
+      "track_weight_change": true,
+      "overwrite": true
+    },
+    "smoke": true,
+    "out_name": "smoke/bf16_full_s0"
+  }
+}

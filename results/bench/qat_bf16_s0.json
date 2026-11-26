@@ -1,0 +1,51 @@
+{
+  "label": "qat_bf16_s0",
+  "model_path": "/vol/checkpoints/qat_full/seed_0",
+  "gpu": "NVIDIA H100 80GB HBM3",
+  "vllm_version": "0.34.0",
+  "enforce_eager": false,
+  "engine_args": {
+    "gpu_memory_utilization": 0.85,
+    "max_model_len": 1024,
+    "seed": 0,
+    "enable_prefix_caching": false
+  },
+  "input_len": 256,
+  "output_len": 256,
+  "warmup_iters": 3,
+  "timed_iters": 20,
+  "load_seconds": 59.2,
+  "warmup_seconds": 1.78,
+  "first_warmup_call_s": 0.57,
+  "checkpoint_safetensors_gb": 0.9202,
+  "gpu_memory_used_gb_after_load": 67.07,
+  "batches": {
+    "1": {
+      "avg_s": 0.5299427763499921,
+      "p50_s": 0.5325036415,
+      "p95_s": 0.5605771099000094,
+      "min_s": 0.4885593810000728,
+      "max_s": 0.5684060199999976,
+      "requests_per_s": 1.886996190206707,
+      "tokens_per_s": 483.071024692917
+    },
+    "8": {
+      "avg_s": 0.5797988683500079,
+      "p50_s": 0.5801540329999852,
+      "p95_s": 0.6104601044500783,
+      "min_s": 0.5304502090000369,
+      "max_s": 0.6124173599999949,
+      "requests_per_s": 13.797888262125117,
+      "tokens_per_s": 3532.25939510403
+    },
+    "32": {
+      "avg_s": 0.6946022972499805,
+      "p50_s": 0.6968062484999678,
+      "p95_s": 0.7273867370999142,
+      "min_s": 0.6526501119999466,
+      "max_s": 0.7398730069999147,
+      "requests_per_s": 46.06952802588201,
+      "tokens_per_s": 11793.799174625794
+    }
+  }
+}

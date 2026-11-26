@@ -1,0 +1,3 @@
+# Run A: plain BF16 full fine-tuning. Identical to Run B except for `quant`.
+arm: bf16_full
+quant: none
